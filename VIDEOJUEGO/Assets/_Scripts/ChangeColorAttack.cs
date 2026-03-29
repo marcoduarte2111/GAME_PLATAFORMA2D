@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerShoot : MonoBehaviour
+public class ChangeColorAttack : MonoBehaviour
 {
-
     public GameObject bulletPrefab;
     public Transform starPos;
-    [HideInInspector] public int maxBullets = 3;
 
-    public void Shoot(InputAction.CallbackContext context)
+    public void ChangeColorShoot(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            Debug.Log("Disparo");
+            Debug.Log("Disparo Change Color Bullet");
             GameObject bullet = Instantiate(bulletPrefab, starPos.position, starPos.rotation);
             Destroy(bullet, 5f);
         }
+
     }
 }

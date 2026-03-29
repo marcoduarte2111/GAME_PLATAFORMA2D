@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class ColorChangeBullet : MonoBehaviour
 {
     private Rigidbody2D _rb;
     public float speed;
@@ -20,19 +20,17 @@ public class Bullet : MonoBehaviour
 
     }
 
-private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<EnemyMovement>().canMove = false;
-            Destroy(collision.gameObject);
-        }else if (collision.CompareTag("Wall"))
+            collision.GetComponent<SpriteRenderer>().color = UnityEngine.Color.green;
+        }
+        else if (collision.CompareTag("Wall"))
         {
             Destroy(gameObject);
         }
 
 
     }
-
-
 }

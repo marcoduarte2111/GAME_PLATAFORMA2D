@@ -32,6 +32,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ShootLimitedBullets",
+                    "type": "Button",
+                    "id": "dd52379a-ded0-4734-9468-aa7bb6a365a9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShootChangeColorBullets",
+                    "type": "Button",
+                    "id": "b8851280-da4e-4722-a34e-847240518cdf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -131,6 +149,28 @@
                     "processors": "",
                     "groups": ";Keyboard",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3d20c2a-3e0d-481e-a2dd-14f0e27860b7",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootLimitedBullets",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22ae39b8-c9e4-481e-8dbd-0c2fe64bb090",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootChangeColorBullets",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
